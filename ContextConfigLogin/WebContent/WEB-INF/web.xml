@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:web="http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd">
+	<servlet>
+		<servlet-name>One</servlet-name>
+		<servlet-class>Login</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>One</servlet-name>
+		<url-pattern>/pss</url-pattern>
+	</servlet-mapping>
+	
+	
+	<servlet>
+		<servlet-name>Two</servlet-name>
+		<servlet-class>LogOut</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>Two</servlet-name>
+		<url-pattern>/rss</url-pattern>
+	</servlet-mapping>
+	
+	
+	<servlet>
+		<servlet-name>Three</servlet-name>
+		<servlet-class>Register</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>Three</servlet-name>
+		<url-pattern>/rej</url-pattern>
+	</servlet-mapping>
+	
+	
+	<servlet>
+        <servlet-name>Four</servlet-name>
+        <servlet-class>RegDetails</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>Four</servlet-name>
+        <url-pattern>/det</url-pattern>
+    </servlet-mapping>
+	
+	
+	<filter>
+        <filter-name>idfilter</filter-name>
+        <filter-class>IDFilter</filter-class>
+    </filter>
+    <filter-mapping>
+        <filter-name>idfilter</filter-name>
+        <url-pattern>/det</url-pattern>
+    </filter-mapping>
+    
+    <filter>
+        <filter-name>namefilter</filter-name>
+        <filter-class>NameFilter</filter-class>
+    </filter>
+    <filter-mapping>
+        <filter-name>namefilter</filter-name>
+        <url-pattern>/det</url-pattern>
+    </filter-mapping>
+    
+	
+	
+	<welcome-file-list>
+		<welcome-file>LoginPage.jsp</welcome-file>
+	</welcome-file-list>
+</web-app>
